@@ -11,8 +11,6 @@
         <div class='date'>
           <%= day[:month] %>/<%= day[:date] %>
         </div>
-        <div class='wday'>
-          <%= wday[:wday] %>
         <ul class='content'>
         <% if day[:plans].length != 0 %>
           <% day[:plans].each do |plan| %>
