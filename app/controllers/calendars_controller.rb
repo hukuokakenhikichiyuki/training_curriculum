@@ -8,14 +8,14 @@ class CalendarsController < ApplicationController
 
   # 予定の保存
   def create
-    @plan = Plan.new(plan_params)
+    Plan.create(plan_params[:calenders])
     redirect_to action: :index
   end
 
   private
 
   def plan_params
-    params.require(:calendars).permit(:date, :plan)
+    params.require(:calenders).permit(:date, :plan)
   end
 
   def get_week
