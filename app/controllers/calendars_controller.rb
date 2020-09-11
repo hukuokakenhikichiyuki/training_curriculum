@@ -11,9 +11,7 @@ class CalendarsController < ApplicationController
     Plan.create(plan_params[:calenders])
     redirect_to action: :index
   end
-
   private
-
   def plan_params
     params.require(:calenders).permit(:date, :plan)
   end 
